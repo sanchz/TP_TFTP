@@ -3,6 +3,8 @@
 
 #include "polonet.h"
 
+#include "TFTP_lib.h"
+
 int main()
 {
     return 0;
