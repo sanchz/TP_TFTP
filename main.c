@@ -9,7 +9,7 @@ GRUPO 3:
         Seeber, Lucas       lseeber@alu.itba.edu.ar
  */
 
-// TESTEDIT CONFLICT
+// Sancho edit
 
 #include <stdio.h>
 #include <stdlib.h>
