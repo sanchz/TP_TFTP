@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1337733534 source:c:\users\santiago\documents\dropbox\itba\eda\tps\tp8 - tftp\tftp\polonet.c
+	<winsock.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/time.h>
+	<sys/ioctl.h>
+	<netinet/in.h>
+	<netdb.h>
+	<unistd.h>
+	<fcntl.h>
+	<sys/filio.h>
+	<stdio.h>
+	<string.h>
+	"polonet.h"
+
+1337733312 c:\users\santiago\documents\dropbox\itba\eda\tps\tp8 - tftp\tftp\polonet.h
+
+1350335941 source:c:\users\santiago\documents\dropbox\itba\eda\tps\tp8 - tftp\tftp\main.c
+	<stdio.h>
+	<stdlib.h>
+	"polonet.h"
+
