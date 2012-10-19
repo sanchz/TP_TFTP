@@ -9,7 +9,6 @@ GRUPO 3:
         Seeber, Lucas       lseeber@alu.itba.edu.ar
  */
 
-// Resolved edit
 
 #include <stdio.h>
 #include <stdlib.h>
