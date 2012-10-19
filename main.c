@@ -1,15 +1,14 @@
 /*
-TRABAJO PRÁCTICO No 8 - TFTP
+TRABAJO PRï¿½CTICO No 8 - TFTP
 EDA 2012
 ITBA
 
 GRUPO 3:
-        Bracco, José Maria	jbracco@alu.itba.edu.ar
+        Bracco, Josï¿½ Maria	jbracco@alu.itba.edu.ar
         Herrero, Santiago	saherrer@alu.itba.edu.ar
         Seeber, Lucas       lseeber@alu.itba.edu.ar
  */
 
-// Test RE EDIT
 
 #include <stdio.h>
 #include <stdlib.h>
