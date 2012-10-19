@@ -18,7 +18,7 @@ typedef enum requests {RRQ, WRQ, NO_REQ} Requests;
 
 typedef PolonetConn TFTPconn;
 
-
+// bkbjkb
 Requests getRequest(TFTPconn* currentConnection, char fileName[MAX_FILENAME_LENGTH]);
 
 void sendWriteRequest(TFTPconn* currentConnection, char* fileName);
