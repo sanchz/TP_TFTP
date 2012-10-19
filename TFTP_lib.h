@@ -94,7 +94,7 @@ bool sendDataPacket(TFTPconn* currentConnection, char data[TFTP_DATA_SIZE], int 
 // En caso de no estar activa la conexión, o de no recibirse dicho paquete, se devuelve FALSE. Si se recibió exitosamente el paquete, se devuelve TRUE.
 bool getDataPacket(TFTPconn* currentConnection, char data[TFTP_DATA_SIZE], int* dataBytes);
 
-// Envía un paquete ACK por la conección 'connection'. Devuelve TRUE si se envió, FALSE si hubo problemas en la conexión.
+// Envía un paquete ACK por la conexión 'connection'. Devuelve TRUE si se envió, FALSE si hubo problemas en la conexión.
 bool sendAcknowledgement(TFTPconn* connection);
 
 // Verifica si se recibió un parquete ACK por 'connection'. Devuelve TRUE si se recibió y es la respuesta esperada (respuesta al último paquete enviado).

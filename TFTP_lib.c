@@ -116,7 +116,7 @@ bool getDataPacket(TFTPconn* currentConnection, char data[TFTP_DATA_SIZE], int* 
     // verificar blocknumber == al recibido
 }
 
-// Envía un paquete ACK por la conección 'connection'. Devuelve TRUE si se envió, FALSE si hubo problemas en la conexión.
+// Envía un paquete ACK por la conexión 'connection'. Devuelve TRUE si se envió, FALSE si hubo problemas en la conexión.
 bool sendAcknowledgement(TFTPconn* connection)
 {
     // isConnected
