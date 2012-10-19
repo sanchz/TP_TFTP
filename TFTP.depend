@@ -61,3 +61,35 @@
 1350669153 c:\users\santiago\documents\dropbox\itba\eda\tps\tp8  tftp\tp_tftp\file_split.h
 	"stdio.h"
 
+1337733534 source:c:\users\santiago\documents\github\tp_tftp\polonet.c
+	<winsock.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/time.h>
+	<sys/ioctl.h>
+	<netinet/in.h>
+	<netdb.h>
+	<unistd.h>
+	<fcntl.h>
+	<sys/filio.h>
+	<stdio.h>
+	<string.h>
+	"polonet.h"
+
+1337733312 c:\users\santiago\documents\github\tp_tftp\polonet.h
+
+1350669379 source:c:\users\santiago\documents\github\tp_tftp\tftp_lib.c
+	"TFTP_lib.h"
+	"file_split.h"
+
+1350669379 c:\users\santiago\documents\github\tp_tftp\tftp_lib.h
+	"bool_def.h"
+	"polonet.h"
+
+1346980664 c:\users\santiago\documents\github\tp_tftp\bool_def.h
+
+1350679201 c:\users\santiago\documents\github\tp_tftp\file_split.h
+	"stdio.h"
+
+1350684822 source:c:\users\santiago\documents\github\tp_tftp\file_split.c
+
