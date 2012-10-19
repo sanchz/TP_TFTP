@@ -34,14 +34,15 @@ typedef struct
 // Funciones del SERVIDOR //
 ////////////////////////////
 
-// Inicializa el servidor TFTP, que recibe conexiones en el puerto 'port'.
-void startTFTPserver(unsigned short port);
+// Inicializa el servidor TFTP, que recibe conexiones en el puerto 'port'. Devuelve la nueva conexión. Aloca memoria
+// que es liberada en 'closeTFTPserver()'. Si no se puedo establecer la conexión se devuelve NULL.
+TFTPconn* startTFTPserver(unsigned short port);
 
-// Devuelve una nueva conexión entrante exitosa al servidor.
+// Devuelve una nueva conexión entrante exitosa en 'connection'.
 // Es bloqueante, ya que espera a que la conexión se haya establecido.
 // De no poder realizarse la conexión (o de producirse un timeout de TFTP_TIMEOUT milisegundos),
-// se devuelve NULL.
-TFTPconn* getTFTPconnection();
+// se devuelve FALSE. Si se pudo establecer devuelve TRUE.
+bool getTFTPconnection(TFTPconn* connection);
 
 // Cierra la conexión 'connection' y deja de recibir conexiones.
 void closeTFTPserver(TFTPconn* connection);
