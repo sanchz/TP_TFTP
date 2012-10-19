@@ -107,7 +107,7 @@ bool sendDataPacket(TFTPconn* currentConnection, char data[TFTP_DATA_SIZE], int 
 
 // Recibe por 'currentConnection' un paquete de datos del protocolo TFTP, de largo indicado en 'dataBytes'.
 // En caso de no estar activa la conexión, o de no recibirse dicho paquete, se devuelve FALSE. Si se recibió exitosamente el paquete, se devuelve TRUE.
-bool getDataPacket(TFTPconn* currentConnection, char data[TFTP_DATA_SIZE], int* dataBytes);
+bool getDataPacket(TFTPconn* currentConnection, char data[TFTP_DATA_SIZE], int* dataBytes)
 {
     // verificar isConnected
     // verificar opCode

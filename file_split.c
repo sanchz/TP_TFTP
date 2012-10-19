@@ -9,20 +9,3 @@ GRUPO 3:
         Seeber, Lucas       lseeber@alu.itba.edu.ar
  */
 
-
-
-#include <stdio.h>
-#include <stdlib.h>
-
-#include "polonet.h"
-
-#include "TFTP_lib.h"
-
-int main()
-{
-    return 0;
-}
-
-
-
-
