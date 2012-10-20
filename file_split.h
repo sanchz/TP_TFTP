@@ -8,16 +8,16 @@ GRUPO 3:
         Herrero, Santiago	saherrer@alu.itba.edu.ar
         Seeber, Lucas       lseeber@alu.itba.edu.ar
  */
-
-
 #ifndef FILE_SPLIT_H_INCLUDED
 #define FILE_SPLIT_H_INCLUDED
 
-#include "stdio.h"
+#include <stdio.h>
+
+#include "bool_def.h"
 
 // Verifica que el nombre 'fileName' no contenga secuencias "\\". Es decir, que no indique una ruta de acceso.
-// Indica TRUE si es válido, FALSE en caso contrario
-bool validateFileName(char* fileName);  /// Verificar funcionamiento con valor de retorno
+// Devuelve TRUE si pasa la validación, FALSE en caso contrario.
+bool validateFileName(char* fileName);
 
 // Copia de 'sourceFile' una cantidad 'blockSize' de bytes, escribiéndolos en 'dest'.
 // Comienza a copiar desde 'sourceFile' en la posición en la que se encuentre el stream indicator del archivo.

@@ -8,17 +8,21 @@ GRUPO 3:
         Herrero, Santiago	saherrer@alu.itba.edu.ar
         Seeber, Lucas       lseeber@alu.itba.edu.ar
  */
-
-
 #ifndef TFTP_LIB_H_INCLUDED
 #define TFTP_LIB_H_INCLUDED
 
 
+#include <stdio.h>
+
 #include "bool_def.h"
 #include "polonet.h"
 
+
+#define MAX_FILENAME_LENGTH     100
 #define TFTP_DATA_SIZE          512
 #define TFTP_TIMEOUT            3000    // Milisegundos
+
+#define MODE_RRQWRQ            "octet"
 
 typedef enum requests {RRQ, WRQ, NO_REQ} Requests;
 
@@ -27,6 +31,7 @@ typedef struct
     PolonetConn currentConnection;
     unsigned short blockNumber;
 } TFTPconn;
+
 
 
 ////////////////////////////
@@ -53,7 +58,7 @@ void closeTFTPserver(TFTPconn* connection);
 // En este caso se guarda el nombre del archivo indicado por el paquete en 'fileName' (se corta el mismo si excede los MAX_FILENAME_LENGTH caracteres).
 // Cualquier otro paquete es descartado, y se devueve una constante NO_REQ en este caso.
 // Si no se recibió un paquete de lectura o de escritura se devuelve NO_REQ.
-Requests getRequest(TFTPconn* currentConnection, char* fileName, int filenameLength);
+Requests getRequest(TFTPconn* currentConnection, char fileName[MAX_FILENAME_LENGTH + 1]);
 
 
 ///////////////////////////
@@ -69,17 +74,17 @@ TFTPconn* connectToTFTPserver(const char *hostname, unsigned short port);
 // Cierra una conexión activa del cliente con el servidor TFTP
 void closeTFTPclientConnection(TFTPconn* clientConnection);
 
-// Envía por la conexión 'currentConnection' un paquete/pedido de escritura del protocolo TFTP al servidor.
+// Envía por la conexión 'clientConnection' un paquete/pedido de escritura del protocolo TFTP al servidor.
 // El nombre del archivo a escribir está indicado por 'fileName', cadena terminada en '\0'.
 // Si no se pudo enviar el paquete (conexión caduca), se devuelve FALSE.
 // Si no hublo problemas de conexión, devuelve TRUE.
-bool sendWriteRequest(TFTPconn* currentConnection, char* fileName);
+bool sendWriteRequest(TFTPconn* clientConnection, char* fileName);
 
-// Envía por la conexión 'currentConnection' un paquete/pedido de lectura del protocolo TFTP al servidor.
+// Envía por la conexión 'clientConnection' un paquete/pedido de lectura del protocolo TFTP al servidor.
 // El nombre del archivo a leer está indicado por 'fileName', cadena terminada en '\0'.
 // Si no se pudo enviar el paquete (conexión caduca), se devuelve FALSE.
 // Si no hublo problemas de conexión, devuelve TRUE.
-bool sendReadRequest(TFTPconn* currentConnection, char* fileName);
+bool sendReadRequest(TFTPconn* clientConnection, char* fileName);
 
 
 ///////////////////////
@@ -103,6 +108,5 @@ bool getAcknowledgement(TFTPconn* connection);
 
 // Devuelve TRUE si la conexión se mantiene activa, FASLE en caso contrario.
 bool isTFTPconnActive(TFTPconn* connection);
-
 
 #endif // TFTP_LIB_H_INCLUDED

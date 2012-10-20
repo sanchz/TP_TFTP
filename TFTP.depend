@@ -78,17 +78,17 @@
 
 1337733312 c:\users\santiago\documents\github\tp_tftp\polonet.h
 
-1350749827 source:c:\users\santiago\documents\github\tp_tftp\tftp_lib.c
+1350758392 source:c:\users\santiago\documents\github\tp_tftp\tftp_lib.c
 	"TFTP_lib.h"
 	"file_split.h"
 
-1350755798 c:\users\santiago\documents\github\tp_tftp\tftp_lib.h
+1350758392 c:\users\santiago\documents\github\tp_tftp\tftp_lib.h
 	"bool_def.h"
 	"polonet.h"
 
 1346980664 c:\users\santiago\documents\github\tp_tftp\bool_def.h
 
-1350753016 c:\users\santiago\documents\github\tp_tftp\file_split.h
+1350758393 c:\users\santiago\documents\github\tp_tftp\file_split.h
 	"stdio.h"
 
 1350684822 source:c:\users\santiago\documents\github\tp_tftp\file_split.c
@@ -100,4 +100,53 @@
 	"TFTP_lib.h"
 	"file_split.h"
 	<time.h>
+
+1337733534 source:c:\users\santiago\documents\dropbox\itba\eda\tps\tp8  tftp\tftp_sancho\polonet.c
+	<winsock.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/time.h>
+	<sys/ioctl.h>
+	<netinet/in.h>
+	<netdb.h>
+	<unistd.h>
+	<fcntl.h>
+	<sys/filio.h>
+	<stdio.h>
+	<string.h>
+	"polonet.h"
+
+1337733312 c:\users\santiago\documents\dropbox\itba\eda\tps\tp8  tftp\tftp_sancho\polonet.h
+
+1350768110 source:c:\users\santiago\documents\dropbox\itba\eda\tps\tp8  tftp\tftp_sancho\file_split.c
+	<string.h>
+	"file_split.h"
+
+1350768133 c:\users\santiago\documents\dropbox\itba\eda\tps\tp8  tftp\tftp_sancho\file_split.h
+	<stdio.h>
+	"bool_def.h"
+
+1346980664 c:\users\santiago\documents\dropbox\itba\eda\tps\tp8  tftp\tftp_sancho\bool_def.h
+
+1350771403 source:c:\users\santiago\documents\dropbox\itba\eda\tps\tp8  tftp\tftp_sancho\main.c
+	<stdio.h>
+	<stdlib.h>
+	"polonet.h"
+	"TFTP_lib.h"
+	"file_split.h"
+	<windows.h>
+	<unistd.h>
+
+1350768446 c:\users\santiago\documents\dropbox\itba\eda\tps\tp8  tftp\tftp_sancho\tftp_lib.h
+	<stdio.h>
+	"bool_def.h"
+	"polonet.h"
+
+1350769758 source:c:\users\santiago\documents\dropbox\itba\eda\tps\tp8  tftp\tftp_sancho\tftp_lib.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<time.h>
+	"TFTP_lib.h"
+	"file_split.h"
 
