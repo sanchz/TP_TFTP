@@ -17,7 +17,6 @@ GRUPO 3:
 #include "bool_def.h"
 #include "polonet.h"
 
-#define MAX_FILENAME_LENGTH     100
 #define TFTP_DATA_SIZE          512
 #define TFTP_TIMEOUT            3000    // Milisegundos
 
@@ -54,7 +53,7 @@ void closeTFTPserver(TFTPconn* connection);
 // En este caso se guarda el nombre del archivo indicado por el paquete en 'fileName' (se corta el mismo si excede los MAX_FILENAME_LENGTH caracteres).
 // Cualquier otro paquete es descartado, y se devueve una constante NO_REQ en este caso.
 // Si no se recibió un paquete de lectura o de escritura se devuelve NO_REQ.
-Requests getRequest(TFTPconn* currentConnection, char fileName[MAX_FILENAME_LENGTH + 1]);
+Requests getRequest(TFTPconn* currentConnection, char* fileName, int filenameLength);
 
 
 ///////////////////////////

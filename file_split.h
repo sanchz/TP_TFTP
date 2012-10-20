@@ -16,7 +16,8 @@ GRUPO 3:
 #include "stdio.h"
 
 // Verifica que el nombre 'fileName' no contenga secuencias "\\". Es decir, que no indique una ruta de acceso.
-bool validateFileName(char* fileName);
+// Indica TRUE si es válido, FALSE en caso contrario
+bool validateFileName(char* fileName);  /// Verificar funcionamiento con valor de retorno
 
 // Copia de 'sourceFile' una cantidad 'blockSize' de bytes, escribiéndolos en 'dest'.
 // Comienza a copiar desde 'sourceFile' en la posición en la que se encuentre el stream indicator del archivo.
