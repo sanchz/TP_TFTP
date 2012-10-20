@@ -40,6 +40,9 @@
 		<Unit filename="TFTP_lib.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="file_split.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="file_split.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
