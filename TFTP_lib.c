@@ -14,19 +14,21 @@ GRUPO 3:
 
 
 
-// Inicializa el servidor TFTP, que recibe conexiones en el puerto 'port'.
-void startTFTPserver(unsigned short port)
-{
-    // start listening
-}
-
-// Devuelve una nueva conexión exitosa al servidor.
-// Es bloqueante, ya que espera a que la conexión se haya establecido.
-// De no poder realizarse la conexión (o de producirse un timeout de TFTP_TIMEOUT milisegundos),
-// se devuelve NULL.
-TFTPconn* getTFTPconnection()
+// Inicializa el servidor TFTP, que recibe conexiones en el puerto 'port'. Devuelve la nueva conexión. Aloca memoria
+// que es liberada en 'closeTFTPserver()'. Si no se puedo establecer la conexión se devuelve NULL.
+TFTPconn startTFTPserver(unsigned short port)
 {
     // alocar memoria
+    // start listening
+
+}
+
+// Devuelve una nueva conexión entrante exitosa en 'connection'.
+// Es bloqueante, ya que espera a que la conexión se haya establecido.
+// De no poder realizarse la conexión (o de producirse un timeout de TFTP_TIMEOUT milisegundos),
+// se devuelve FALSE. Si se pudo establecer devuelve TRUE.
+TFTPconn* getTFTPconnection()
+{
     // get connection
     // is pending
     // block number = 0
