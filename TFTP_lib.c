@@ -16,23 +16,21 @@ GRUPO 3:
 
 // Inicializa el servidor TFTP, que recibe conexiones en el puerto 'port'. Devuelve la nueva conexión. Aloca memoria
 // que es liberada en 'closeTFTPserver()'. Si no se puedo establecer la conexión se devuelve NULL.
-TFTPconn startTFTPserver(unsigned short port)
+TFTPconn* startTFTPserver(unsigned short port)
 {
     // alocar memoria
     // start listening
-
+    // block number = 0
 }
 
 // Devuelve una nueva conexión entrante exitosa en 'connection'.
 // Es bloqueante, ya que espera a que la conexión se haya establecido.
 // De no poder realizarse la conexión (o de producirse un timeout de TFTP_TIMEOUT milisegundos),
 // se devuelve FALSE. Si se pudo establecer devuelve TRUE.
-TFTPconn* getTFTPconnection()
+bool getTFTPconnection(TFTPconn* connection)
 {
     // get connection
     // is pending
-    // block number = 0
-
 }
 
 // Cierra la conexión 'connection' y deja de recibir conexiones.
@@ -49,7 +47,7 @@ void closeTFTPserver(TFTPconn* connection)
 // En este caso se guarda el nombre del archivo indicado por el paquete en 'fileName' (se corta el mismo si excede los MAX_FILENAME_LENGTH caracteres).
 // Cualquier otro paquete es descartado, y se devueve una constante NO_REQ en este caso.
 // Si no se recibió un paquete de lectura o de escritura se devuelve NO_REQ.
-Requests getRequest(TFTPconn* currentConnection, char fileName[MAX_FILENAME_LENGTH + 1])
+Requests getRequest(TFTPconn* currentConnection, char* fileName, int filenameLength)
 {
     // verificar isConnected
     // verificar opcode
@@ -119,7 +117,7 @@ bool getDataPacket(TFTPconn* currentConnection, char data[TFTP_DATA_SIZE], int* 
 }
 
 // Envía un paquete ACK por la conexión 'connection'. Devuelve TRUE si se envió, FALSE si hubo problemas en la conexión.
-bool sendAcknowledgement(TFTPconn* connection)
+bool sendAcknowledgement(TFTPconn* connection)      /// Verificar los block#
 {
     // isConnected
     // verificar núm bytes enviados
