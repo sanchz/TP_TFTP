@@ -18,7 +18,7 @@ GRUPO 3:
 #include "polonet.h"
 
 
-#define MAX_FILENAME_LENGTH     100
+#define MAX_FILENAME_LENGTH     255
 #define TFTP_DATA_SIZE          512
 #define TFTP_TIMEOUT            3000    // Milisegundos
 

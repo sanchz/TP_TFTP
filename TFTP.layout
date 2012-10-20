@@ -2,10 +2,10 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="TFTP_lib.c" open="1" top="0" tabpos="3">
-		<Cursor position="6866" topLine="267" />
+		<Cursor position="6866" topLine="78" />
 	</File>
-	<File name="TFTP_lib.h" open="1" top="1" tabpos="2">
-		<Cursor position="511" topLine="79" />
+	<File name="TFTP_lib.h" open="1" top="0" tabpos="2">
+		<Cursor position="377" topLine="63" />
 	</File>
 	<File name="file_split.c" open="1" top="0" tabpos="5">
 		<Cursor position="0" topLine="0" />
@@ -13,8 +13,8 @@
 	<File name="file_split.h" open="1" top="0" tabpos="4">
 		<Cursor position="830" topLine="7" />
 	</File>
-	<File name="main.c" open="1" top="0" tabpos="1">
-		<Cursor position="793" topLine="22" />
+	<File name="main.c" open="1" top="1" tabpos="1">
+		<Cursor position="312" topLine="0" />
 	</File>
 	<File name="polonet.c" open="0" top="0" tabpos="0">
 		<Cursor position="5466" topLine="279" />

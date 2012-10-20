@@ -78,28 +78,38 @@
 
 1337733312 c:\users\santiago\documents\github\tp_tftp\polonet.h
 
-1350758392 source:c:\users\santiago\documents\github\tp_tftp\tftp_lib.c
+1350769758 source:c:\users\santiago\documents\github\tp_tftp\tftp_lib.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<time.h>
 	"TFTP_lib.h"
 	"file_split.h"
 
-1350758392 c:\users\santiago\documents\github\tp_tftp\tftp_lib.h
+1350774463 c:\users\santiago\documents\github\tp_tftp\tftp_lib.h
+	<stdio.h>
 	"bool_def.h"
 	"polonet.h"
 
 1346980664 c:\users\santiago\documents\github\tp_tftp\bool_def.h
 
-1350758393 c:\users\santiago\documents\github\tp_tftp\file_split.h
-	"stdio.h"
+1350771955 c:\users\santiago\documents\github\tp_tftp\file_split.h
+	<stdio.h>
+	"bool_def.h"
 
-1350684822 source:c:\users\santiago\documents\github\tp_tftp\file_split.c
+1350771963 source:c:\users\santiago\documents\github\tp_tftp\file_split.c
+	<string.h>
+	"file_split.h"
 
-1350755798 source:c:\users\santiago\documents\github\tp_tftp\main.c
+1350774731 source:c:\users\santiago\documents\github\tp_tftp\main.c
 	<stdio.h>
 	<stdlib.h>
 	"polonet.h"
 	"TFTP_lib.h"
 	"file_split.h"
-	<time.h>
+	<windows.h>
+	<unistd.h>
+	<ctype.h>
 
 1337733534 source:c:\users\santiago\documents\dropbox\itba\eda\tps\tp8  tftp\tftp_sancho\polonet.c
 	<winsock.h>

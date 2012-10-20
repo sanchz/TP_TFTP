@@ -19,7 +19,7 @@ GRUPO 3:
 #define TFTP_PORT   69
 #define WAIT_INTERVAL   100 // Milisegundos
 #define WAIT_TRIES      15
-#define MAX_FILENAME_LENGTH     100
+#define MAX_CHARS       255
 
 
 // Portable sleep functions
@@ -137,6 +137,18 @@ bool sendFileOverTFTP(TFTPconn* link, const char* filename)
 }
 
 
+#include <ctype.h>
+void str2Lower(char string[])
+{
+    int i=0;
+
+    while (string[i])
+    {
+        string[i] = tolower(string[i]);
+        i++;
+    }
+}
+
 
 #define __SERVER
 //#define __CLIENT
@@ -211,22 +223,68 @@ int main()
 #elif defined __CLIENT
 int main(int argc, char* argv[])
 {
-    bool exit = FALSE;
+    bool quit = FALSE;
     TFTPconn* clientConn;
+    char command[MAX_CHARS];
+    char currentFileName[MAX_FILENAME_LENGTH+1];
 
-    while(exit != TRUE)
+    if(argc >= 2)
     {
-        clientConn =  connectToTFTPserver(argv[1], TFTP_PORT);
-        if(clientConn == NULL)
-            exit = TRUE;
-        else
+        while(!quit)
         {
+            clientConn =  connectToTFTPserver(argv[1], TFTP_PORT);
+            if(clientConn == NULL)
+            {
+                quit = TRUE;
+                printf("Could not connect to server at ip: <%s>\n\n", argv[1])
+            }
+            else
+            {
+                printf("tftp>");
 
+                scanf("%s",command);    //Leo el comando ingresado.
+
+                str2Lower(command);
+
+                if(strcmp(command,"put") == 0)
+                {
+                    scanf("%s",filename);    //Leo el nombre del archivo.
+                    if(sendFileOverTFTP(clientConn, filename)
+                    {
+                        printf("File sent successfully\n\n");
+                    }
+                    else
+                    {
+                        printf("File could not be sent\n\n");
+                    }
+                }
+                else if(strcmp(command,"get") == 0)
+                {
+                    scanf("%s",filname);    //Leo el nombre del archivo.
+                    if(receiveFileOverTFTP(clientConn, filename)
+                    {
+                        printf("File sent successfully\n\n");
+                    }
+                    else
+                    {
+                        printf("File could not be sent\n\n");
+                    }
+                }
+                else if(strcmp(command,"quit") == 0)
+                {
+                    quit = TRUE;
+                }
+                else
+                    printf("Command not recognized\n\n");
+
+                while(getchar() != '\n');
+            }
         }
     }
+    else
+        printf("No ip address specified\n\n");
 
-
-
+    return 0;
     // conexión
     // entrada
     // transferencia
@@ -236,7 +294,4 @@ int main(int argc, char* argv[])
     return 0;
 }
 #endif
-
-
-
 
